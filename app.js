@@ -11,7 +11,7 @@ var usersRouter = require('./routes/users.Router'); // Import the router for the
 
 require('dotenv').config(); // Load environment variables from .env file
 
-const {  } = require('./db/db'); // Import the function to connect to MongoDB
+const { ConnectToMongoDB } = require('./db/db'); // Import the function to connect to MongoDB
 
 var app = express(); // Create an instance of the Express application
 
@@ -42,5 +42,5 @@ app.use(function(err, req, res, next) {
 
 const server = http.createServer(app); // Create an HTTP server using the Express application
 server.listen(process.env.port, () => { // Start the server and listen on the port specified in the environment variables
-  console.log('Server is running '); // Log a message indicating that the server is running
+  ConnectToMongoDB(),console.log('Server is running '); // Log a message indicating that the server is running
 });
