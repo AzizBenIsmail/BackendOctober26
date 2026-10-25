@@ -42,5 +42,6 @@ app.use(function(err, req, res, next) {
 
 const server = http.createServer(app); // Create an HTTP server using the Express application
 server.listen(process.env.port, () => { // Start the server and listen on the port specified in the environment variables
-  ConnectToMongoDB(),console.log('Server is running '); // Log a message indicating that the server is running
+  ConnectToMongoDB(),
+    console.log('Server is running ');
 });
