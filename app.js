@@ -10,6 +10,9 @@ var indexRouter = require('./routes/index'); // Import the router for the index 
 var usersRouter = require('./routes/users.Router'); // Import the router for the users route
 
 require('dotenv').config(); // Load environment variables from .env file
+
+const {  } = require('./db/db'); // Import the function to connect to MongoDB
+
 var app = express(); // Create an instance of the Express application
 
 app.use(logger('dev')); // Use the 'morgan' logger middleware in development mode
